@@ -33,7 +33,7 @@ function mapOfStringToBoolean(allowNullValues: boolean, allowUndefinedValues: bo
                         continue;
                 }
                 if (!_.isBoolean(b)) // this checks both primitives and Boolean wrappers
-                    throw new Error(`${messagePrefix} not a Boolean: [${b}] -`);
+                    throw new Error(`${msgPref} not a Boolean: [${b}] -`);
             }
         }
         return null; // assume all OK

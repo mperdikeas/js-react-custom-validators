@@ -10,4 +10,9 @@ describe('mapOfStringToBoolean', function () {
        , function () {
            assert(_.isFunction(mapOfStringToBoolean));
        });
+    it('should work in the typical affirmative case'
+       , function () {
+           const m = new Map();
+           assert(_.isFunction(mapOfStringToBoolean));
+       });    
 });

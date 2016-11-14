@@ -1,0 +1,8 @@
+I am now using the flow-typed approach for 3rd party
+library interface definitions for use with Flow.
+
+As such, I no longer need to maintain my own declarations
+for lodash.
+
+However, I have decided to keep this directory as it shows
+how its done.
