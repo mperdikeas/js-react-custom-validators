@@ -1,0 +1,3 @@
+This is currently empty as I am bringing in lodash definitions
+using flow-typed. Some sample definitions of my own are to be
+found in ../decls.samples

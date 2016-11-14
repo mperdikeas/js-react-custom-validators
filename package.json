@@ -1,6 +1,6 @@
 {
   "name": "react-custom-validators",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -10,9 +10,14 @@
     "build-watch": "babel src --out-dir lib --source-maps --watch",
     "start": "npm run build && node lib/index.js",
     "flow-check": "flow-typed install && flow check",
-    "flow-check.README": ["to run flow continuously use the following incantation from the shell: ",
-                          "$ watch -n 0.5 -t -d npm run flow check                                "
-                         ],
+    "flow-check-drft": "flow check",
+    "flow-check-drft.README": "drft stands for 'Dont Re-install Flow-Typed'",
+    "flow-check.README": [
+      "to run flow continuously use the following incantation from the shell: ",
+      "$ npm run flow-check && npm run watch -n 0.5 -t -d npm run flow-check-drft",
+      "... the above incantation will install the flow-typed definitions only the",
+      "first time and then continuously invoke flow *without* re-installing the said definitions"
+    ],
     "flow": "flow-typed install && (flow; test $? -eq 0 -o $? -eq 2)",
     "flow-stop": "flow stop",
     "test": "npm run build && mocha --require source-map-support/register --compilers js:babel-register",
@@ -30,7 +35,8 @@
   },
   "homepage": "https://github.com/mperdikeas/js-react-custom-validators#readme",
   "keywords": [
-      "reactjs", "validators"
+    "reactjs",
+    "validators"
   ],
   "author": "",
   "license": "ISC",
@@ -41,6 +47,7 @@
     "babel-plugin-transform-flow-strip-types": "^6.8.0",
     "babel-preset-es2015": "^6.9.0",
     "babel-runtime": "^6.6.1",
+    "chai": "^3.5.0",
     "flow-bin": "^0.28.0",
     "in-publish": "^2.0.0",
     "mocha": "^2.5.3"
