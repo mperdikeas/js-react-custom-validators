@@ -1,16 +1,3 @@
-declare class ChaiAssert {
-        instanceOf    (x: any, t: any): boolean;
-        isNumber      (x: any)        : boolean;
-        isString      (x: any)        : boolean;
-        isTrue        (x: any)        : boolean;
-        isNull        (x: any)        : boolean;
-        throws        (f:   F)        : boolean;
-}
-
-declare type F  = () => any;
-declare type F1 = (a1: any, a2: string, a3: string, a4: any) => null;
-
-
 // See https://github.com/facebook/flow/issues/810
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 declare class Symbol {
