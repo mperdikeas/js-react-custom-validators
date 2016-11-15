@@ -1,6 +1,7 @@
 require('source-map-support').install();
 import 'babel-polyfill';
-import {assert} from 'chai';
+import chai from 'chai';
+const assert = chai.assert;
 import _ from 'lodash';
 
 import {mapOfStringToBoolean} from '../lib/index.js';
@@ -16,7 +17,8 @@ describe('mapOfStringToBoolean', function () {
            m.set('a', true);
            m.set('b', false);
            const props = Object.assign({}, {m:m});;
-           assert.isNull(mapOfStringToBoolean(false, false)(props, 'm', 'foo', 'boo'));
+           const f = mapOfStringToBoolean(false, false);
+           assert.isNull(f(props, 'm', 'foo', 'boo'));
        });
     it('should tolerate nulls in values but only if so configured'
        , function () {

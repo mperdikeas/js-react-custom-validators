@@ -5,7 +5,8 @@ const     _ = require('lodash');
 import {createChainableTypeChecker} from 'react-chainable-type-checker';
 
 
-function mapOfStringToBoolean(allowNullValues: boolean, allowUndefinedValues: boolean) {
+
+function mapOfStringToBoolean(allowNullValues: boolean, allowUndefinedValues: boolean) : F1 {
     function _mapOfStringToBoolean(props: any, propName: string, componentName: string, location: any) {
         componentName = componentName || 'anonymous';
         const msb = props[propName];
@@ -45,3 +46,4 @@ function mapOfStringToBoolean(allowNullValues: boolean, allowUndefinedValues: bo
 
 
 exports.mapOfStringToBoolean = mapOfStringToBoolean;
+

@@ -1,0 +1,5 @@
+Since I am bringing in lodash definitions
+using flow-typed in the normative directory "flow-typed", I
+no longer use these definitions. I just keep them around for
+reference and in case I need to add my own in the "flow-typed"
+dir.
