@@ -1,0 +1,16 @@
+Since I am bringing in the lodash definitions
+using flow-typed in the normative directory [flow-typed], I
+no longer use these definitions.
+
+I just keep them around for
+reference and in case I need to add my own in the "decls"
+dir that's configured in the the [lib] property in file
+[.flowconfig]
+
+Note that according to this answer:
+
+    http://stackoverflow.com/a/40600369/274677
+
+
+... the definitions in the [lib]-configured directory are
+used *in addition* to those found in [flow-typed].
